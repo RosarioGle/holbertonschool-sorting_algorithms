@@ -8,6 +8,8 @@
  * @size: the size of the array
  * @left: the starting index of the subset
  * @right: the ending index of the subset
+ *
+ * Return: the final partition index
  */
 
 int lomuto_partition(int *array, size_t size, int left, int right)
