@@ -36,10 +36,12 @@ void insertion_sort_list(listint_t **list)
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
+	/* Move through the list from 2nd node until end */
 	for (iter = (*list)->next; iter != NULL; iter = temp)
 	{
 		temp = iter->next;
 		insert = iter->prev;
+		/* Match correct position of iteration in list */
 		while (insert != NULL && iter->n < insert->n)
 		{
 			swap_nodes(list, &insert, iter);
